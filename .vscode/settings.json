@@ -1,0 +1,15 @@
+{
+  "files.associations": {
+    "**/frontmatter.json": "jsonc",
+    "**/.frontmatter/config/*.json": "jsonc",
+    "*.atml": "html",
+    "*.njk": "html",
+    "*.fish": "powershell",
+    "*.js": "javascript",
+    "*.mdx": "markdown",
+    ".babelrc": "json",
+    ".huskyrc": "json",
+    ".env*": "dotenv",
+    "iostream": "cpp"
+  }
+}
