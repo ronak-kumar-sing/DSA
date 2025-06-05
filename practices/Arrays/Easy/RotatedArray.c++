@@ -17,39 +17,11 @@
  * • In-place vs auxiliary space algorithms
  * • Mathematical optimization techniques
  *
- * 🏆 INTERVIEW RELEVANCE: ⭐⭐⭐⭐⭐
- * Common in: Google, Amazon, Microsoft, Facebook technical interviews
  */
 
 #include <iostream>
 #include <algorithm> // For reverse() function used in optimized method
 using namespace std;
-
-/**
- * 🔄 ARRAY ROTATION DEEP DIVE
- *
- * 📚 PROBLEM UNDERSTANDING:
- * Rotate array [1,2,3,4,5] right by 2 positions → [4,5,1,2,3]
- * Notice: Last 2 elements move to front, others shift right
- *
- * 🧠 CORE CONCEPT: Circular shifting
- * Think of the array as a circle where the last position connects to the first.
- * Rotation = shifting the "starting point" of our view of this circle.
- *
- * 🏠 REAL LIFE ANALOGIES:
- * 1. 🎠 Carousel: Seats rotate, but relative positions stay same
- * 2. 🪑 Musical chairs: Everyone moves k seats clockwise
- * 3. 📦 Conveyor belt: Items shift right, end items wrap to beginning
- * 4. 🕐 Clock face: Numbers rotate but maintain spacing
- *
- * 🔢 MATHEMATICAL INSIGHT:
- * For element at position i, new position = (i + k) % n
- * The % operator handles the wrap-around automatically!
- *
- * 📈 COMPLEXITY ANALYSIS:
- * Method 1 (Extra Space): Time O(n), Space O(n) - Beginner friendly
- * Method 2 (Three Reversals): Time O(n), Space O(1) - Interview favorite
- */
 
 // Sample Input
 // 6 3
@@ -215,24 +187,4 @@ int main()
  * 2. Fix order of first k elements → correct front part
  * 3. Fix order of remaining elements → correct back part
  * Result: Perfect rotation achieved with just reversals!
- *
- * 💡 INTERVIEW TIPS:
- * • Always mention both approaches and their trade-offs
- * • Start with Method 1, then optimize to Method 2
- * • Explain the modular arithmetic clearly
- * • Handle edge cases: k=0, k>n, empty array
- * • Test with examples: k=0, k=n, k>n
- *
- * 🔍 COMMON MISTAKES TO AVOID:
- * 1. Forgetting k = k % n (when k > array size)
- * 2. Off-by-one errors in loop boundaries
- * 3. Not handling edge cases (empty array, k=0)
- * 4. Confusing left vs right rotation
- * 5. Integer overflow in large arrays
- *
- * 🎓 RELATED PROBLEMS TO PRACTICE:
- * • Rotate Array Left
- * • Rotate String
- * • Cyclic Array Search
- * • Find Minimum in Rotated Sorted Array
- */
+ **/
