@@ -39,6 +39,32 @@ void moveZerosToEnd(int arr[], int n)
   }
 }
 
+// * Using Two Pointer Approach
+// TC: O(n)
+// SC: O(1);
+void pointerMoveZerosToEnd(int arr[], int n)
+{
+  int j = -1, i = 0;
+  for (int i = 0; i < n; i++)
+  {
+    if (arr[i] == 0)
+    {
+      j = i;
+      break;
+    }
+  }
+  if (j == -1)
+    return;
+  for (int i = j + 1; i < n; i++)
+  {
+    if (arr[i] != 0)
+    {
+      swap(arr[i], arr[j]);
+      j++;
+    }
+  }
+}
+
 /*
  * Helper function to print array elements
  */
@@ -68,7 +94,8 @@ int main()
   printArray(arr, n);
 
   // Move all zeros to the end
-  moveZerosToEnd(arr, n);
+  // moveZerosToEnd(arr, n);
+  pointerMoveZerosToEnd(arr, n);
 
   cout << "After moving zeros to end: ";
   printArray(arr, n);
