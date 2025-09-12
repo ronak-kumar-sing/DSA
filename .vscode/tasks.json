@@ -4,7 +4,7 @@
         {
             "label": "Build and Run C++",
             "type": "shell",
-            "command": "g++ -o ${fileBasenameNoExtension} ${file} && ./${fileBasenameNoExtension}",
+            "command": "clear && g++ -std=c++17 -Wall -o ${fileBasenameNoExtension} ${file} && ./${fileBasenameNoExtension}",
             "group": {
                 "kind": "build",
                 "isDefault": true
