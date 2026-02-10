@@ -22,6 +22,10 @@ function getFiles(dirPath) {
   return fs.readdirSync(fullPath)
     .filter(file => file.endsWith('.c++') || file.endsWith('.cpp'))
     .filter(file => !file.startsWith('#') && !file.includes('tempCodeRunner'))
+    .sort((a, b) => {
+      // Natural sort for filenames with numbers (pattern_1, pattern_2, ... pattern_10)
+      return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
+    })
     .map(file => {
       const filePath = path.join(fullPath, file);
       const content = fs.readFileSync(filePath, 'utf-8');
