@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSA Code Library</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            border: "hsl(240 3.7% 15.9%)",
+            input: "hsl(240 3.7% 15.9%)",
+            ring: "hsl(240 4.9% 83.9%)",
+            background: "hsl(240 10% 3.9%)",
+            foreground: "hsl(0 0% 98%)",
+            primary: {
+              DEFAULT: "hsl(0 0% 98%)",
+              foreground: "hsl(240 5.9% 10%)",
+            },
+            secondary: {
+              DEFAULT: "hsl(240 3.7% 15.9%)",
+              foreground: "hsl(0 0% 98%)",
+            },
+            muted: {
+              DEFAULT: "hsl(240 3.7% 15.9%)",
+              foreground: "hsl(240 5% 64.9%)",
+            },
+            accent: {
+              DEFAULT: "hsl(240 3.7% 15.9%)",
+              foreground: "hsl(0 0% 98%)",
+            },
+            card: {
+              DEFAULT: "hsl(240 10% 3.9%)",
+              foreground: "hsl(0 0% 98%)",
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['Fira Code', 'JetBrains Mono', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Prism.js for syntax highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    * { scrollbar-width: thin; scrollbar-color: #27272a transparent; }
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
+    
+    pre[class*="language-"] {
+      margin: 0 !important;
+      padding: 1.5rem !important;
+      background: #18181b !important;
+      font-size: 0.875rem;
+      line-height: 1.7;
+      border-radius: 0 0 0.75rem 0.75rem;
+    }
+    
+    code[class*="language-"] {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.875rem;
+    }
+    
+    .line-numbers .line-numbers-rows {
+      border-right: 1px solid #27272a;
+      padding-right: 1rem;
+    }
+    
+    .line-numbers-rows > span:before {
+      color: #52525b;
+    }
+
+    /* Custom animations */
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animate-slide-in {
+      animation: slideIn 0.2s ease-out;
+    }
+  </style>
+</head>
+<body class="bg-background text-foreground font-sans antialiased">
+  <div class="flex h-screen overflow-hidden">
+    
+    <!-- Sidebar -->
+    <aside class="w-80 min-w-[320px] bg-card border-r border-border flex flex-col">
+      
+      <!-- Header -->
+      <div class="p-6 border-b border-border">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center">
+            <i data-lucide="code-2" class="w-5 h-5 text-white"></i>
+          </div>
+          <div>
+            <h1 class="font-semibold text-lg">DSA Library</h1>
+            <p class="text-sm text-muted-foreground">Code Collection</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Search -->
+      <div class="p-4 border-b border-border">
+        <div class="relative">
+          <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground"></i>
+          <input 
+            type="text" 
+            id="searchInput"
+            placeholder="Search files..."
+            class="w-full h-10 pl-10 pr-4 rounded-lg bg-secondary border border-border text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background transition-all"
+          >
+        </div>
+      </div>
+      
+      <!-- Filter Pills -->
+      <div class="p-4 border-b border-border flex flex-wrap gap-2">
+        <button class="filter-btn px-3 py-1.5 text-xs font-medium rounded-full bg-primary text-primary-foreground transition-colors" data-filter="all">
+          All
+        </button>
+        <button class="filter-btn px-3 py-1.5 text-xs font-medium rounded-full bg-secondary text-muted-foreground hover:bg-zinc-800 transition-colors" data-filter="easy">
+          Easy
+        </button>
+        <button class="filter-btn px-3 py-1.5 text-xs font-medium rounded-full bg-secondary text-muted-foreground hover:bg-zinc-800 transition-colors" data-filter="medium">
+          Medium
+        </button>
+        <button class="filter-btn px-3 py-1.5 text-xs font-medium rounded-full bg-secondary text-muted-foreground hover:bg-zinc-800 transition-colors" data-filter="sorting">
+          Sorting
+        </button>
+        <button class="filter-btn px-3 py-1.5 text-xs font-medium rounded-full bg-secondary text-muted-foreground hover:bg-zinc-800 transition-colors" data-filter="patterns">
+          Patterns
+        </button>
+      </div>
+      
+      <!-- File Tree -->
+      <div class="flex-1 overflow-y-auto py-2" id="fileTree">
+        <!-- Populated by JS -->
+      </div>
+      
+      <!-- Footer Stats -->
+      <div class="p-4 border-t border-border">
+        <div class="grid grid-cols-3 gap-2 text-center">
+          <div class="p-2 rounded-lg bg-secondary">
+            <div class="text-lg font-semibold" id="statFiles">0</div>
+            <div class="text-[10px] text-muted-foreground uppercase tracking-wide">Files</div>
+          </div>
+          <div class="p-2 rounded-lg bg-secondary">
+            <div class="text-lg font-semibold" id="statCategories">0</div>
+            <div class="text-[10px] text-muted-foreground uppercase tracking-wide">Topics</div>
+          </div>
+          <div class="p-2 rounded-lg bg-secondary">
+            <div class="text-lg font-semibold" id="statLines">0</div>
+            <div class="text-[10px] text-muted-foreground uppercase tracking-wide">Lines</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col overflow-hidden">
+      
+      <!-- Top Bar -->
+      <header class="h-14 px-6 border-b border-border flex items-center justify-between bg-card" id="topBar" style="display: none;">
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2">
+            <i data-lucide="file-code" class="w-4 h-4 text-muted-foreground"></i>
+            <span class="font-medium" id="fileName">-</span>
+          </div>
+          <span class="text-xs text-muted-foreground font-mono bg-secondary px-2 py-1 rounded" id="filePath">-</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button 
+            id="copyBtn"
+            class="inline-flex items-center gap-2 h-9 px-4 rounded-lg bg-secondary text-sm font-medium hover:bg-zinc-800 transition-colors"
+          >
+            <i data-lucide="copy" class="w-4 h-4"></i>
+            Copy
+          </button>
+        </div>
+      </header>
+      
+      <!-- Content Area -->
+      <div class="flex-1 overflow-auto p-6" id="contentArea">
+        
+        <!-- Welcome Screen -->
+        <div id="welcomeScreen" class="h-full flex items-center justify-center">
+          <div class="text-center max-w-lg animate-slide-in">
+            <div class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-violet-500/20 to-purple-600/20 flex items-center justify-center">
+              <i data-lucide="terminal" class="w-10 h-10 text-violet-400"></i>
+            </div>
+            <h2 class="text-3xl font-bold mb-3">Welcome to DSA Library</h2>
+            <p class="text-muted-foreground mb-8">
+              Your personal collection of Data Structures & Algorithms code. Select a file from the sidebar to start exploring.
+            </p>
+            
+            <div class="grid grid-cols-2 gap-4 text-left">
+              <div class="p-4 rounded-xl bg-card border border-border">
+                <div class="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center mb-3">
+                  <i data-lucide="zap" class="w-4 h-4 text-green-500"></i>
+                </div>
+                <h3 class="font-semibold mb-1">Fast Search</h3>
+                <p class="text-sm text-muted-foreground">Quickly find any algorithm by name</p>
+              </div>
+              <div class="p-4 rounded-xl bg-card border border-border">
+                <div class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center mb-3">
+                  <i data-lucide="palette" class="w-4 h-4 text-blue-500"></i>
+                </div>
+                <h3 class="font-semibold mb-1">Syntax Highlighting</h3>
+                <p class="text-sm text-muted-foreground">Beautiful code display with colors</p>
+              </div>
+              <div class="p-4 rounded-xl bg-card border border-border">
+                <div class="w-8 h-8 rounded-lg bg-orange-500/10 flex items-center justify-center mb-3">
+                  <i data-lucide="copy" class="w-4 h-4 text-orange-500"></i>
+                </div>
+                <h3 class="font-semibold mb-1">One-Click Copy</h3>
+                <p class="text-sm text-muted-foreground">Copy code instantly to clipboard</p>
+              </div>
+              <div class="p-4 rounded-xl bg-card border border-border">
+                <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center mb-3">
+                  <i data-lucide="folder-tree" class="w-4 h-4 text-purple-500"></i>
+                </div>
+                <h3 class="font-semibold mb-1">Organized</h3>
+                <p class="text-sm text-muted-foreground">Files grouped by topic & difficulty</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Code Display -->
+        <div id="codeDisplay" class="hidden animate-slide-in">
+          <div class="rounded-xl border border-border overflow-hidden shadow-2xl">
+            <!-- Code Header -->
+            <div class="flex items-center justify-between px-4 py-3 bg-zinc-900 border-b border-border">
+              <div class="flex items-center gap-2">
+                <div class="flex gap-1.5">
+                  <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+                <span class="ml-3 text-xs text-muted-foreground font-mono" id="codeFileName">-</span>
+              </div>
+              <span class="text-xs font-medium text-muted-foreground bg-secondary px-2 py-0.5 rounded">C++</span>
+            </div>
+            <!-- Code Content -->
+            <pre class="line-numbers"><code class="language-cpp" id="codeBlock"></code></pre>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 px-4 py-3 rounded-lg bg-zinc-800 border border-border shadow-xl flex items-center gap-3 opacity-0 translate-y-4 transition-all duration-300 pointer-events-none">
+    <div class="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
+      <i data-lucide="check" class="w-3 h-3 text-green-500"></i>
+    </div>
+    <span class="text-sm font-medium">Copied to clipboard!</span>
+  </div>
+  
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  
+  <script type="module">
+    import codeData from './data.js';
+    
+    let currentCode = '';
+    
+    // Initialize Lucide icons
+    lucide.createIcons();
+    
+    // Build file tree
+    function buildFileTree() {
+      const container = document.getElementById('fileTree');
+      container.innerHTML = '';
+      
+      Object.entries(codeData).forEach(([category, files]) => {
+        const section = document.createElement('div');
+        section.className = 'category-section';
+        section.dataset.category = category.toLowerCase();
+        
+        // Category Header
+        const header = document.createElement('button');
+        header.className = 'w-full flex items-center gap-2 px-4 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider hover:text-foreground transition-colors';
+        header.innerHTML = `
+          <i data-lucide="chevron-down" class="w-3 h-3 transition-transform category-chevron"></i>
+          <span>${category}</span>
+          <span class="ml-auto text-[10px] bg-secondary px-1.5 py-0.5 rounded-full">${files.length}</span>
+        `;
+        header.onclick = () => toggleCategory(section);
+        
+        // File List
+        const list = document.createElement('div');
+        list.className = 'category-files pl-4';
+        
+        files.forEach(file => {
+          const item = document.createElement('button');
+          item.className = 'file-item w-full flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-lg mx-2 transition-colors';
+          item.dataset.filename = file.filename.toLowerCase();
+          item.dataset.name = file.name.toLowerCase();
+          item.innerHTML = `
+            <i data-lucide="file-text" class="w-4 h-4 text-muted-foreground/60"></i>
+            <span class="truncate">${file.name}</span>
+          `;
+          item.onclick = () => showCode(file, item);
+          list.appendChild(item);
+        });
+        
+        section.appendChild(header);
+        section.appendChild(list);
+        container.appendChild(section);
+      });
+      
+      lucide.createIcons();
+    }
+    
+    function toggleCategory(section) {
+      const chevron = section.querySelector('.category-chevron');
+      const files = section.querySelector('.category-files');
+      
+      if (files.style.display === 'none') {
+        files.style.display = 'block';
+        chevron.style.transform = 'rotate(0deg)';
+      } else {
+        files.style.display = 'none';
+        chevron.style.transform = 'rotate(-90deg)';
+      }
+    }
+    
+    function showCode(file, element) {
+      // Update active state
+      document.querySelectorAll('.file-item').forEach(item => {
+        item.classList.remove('bg-secondary', 'text-foreground');
+        item.classList.add('text-muted-foreground');
+      });
+      element.classList.remove('text-muted-foreground');
+      element.classList.add('bg-secondary', 'text-foreground');
+      
+      // Show top bar
+      document.getElementById('topBar').style.display = 'flex';
+      document.getElementById('fileName').textContent = file.name;
+      document.getElementById('filePath').textContent = file.path;
+      
+      // Show code
+      document.getElementById('welcomeScreen').classList.add('hidden');
+      document.getElementById('codeDisplay').classList.remove('hidden');
+      document.getElementById('codeFileName').textContent = file.filename;
+      
+      const codeBlock = document.getElementById('codeBlock');
+      codeBlock.textContent = file.content;
+      currentCode = file.content;
+      
+      Prism.highlightElement(codeBlock);
+    }
+    
+    // Copy functionality
+    document.getElementById('copyBtn').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(currentCode);
+        const toast = document.getElementById('toast');
+        toast.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+        setTimeout(() => {
+          toast.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy:', err);
+      }
+    });
+    
+    // Search
+    document.getElementById('searchInput').addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase();
+      
+      document.querySelectorAll('.file-item').forEach(item => {
+        const matches = item.dataset.filename.includes(query) || item.dataset.name.includes(query);
+        item.style.display = matches ? 'flex' : 'none';
+      });
+      
+      document.querySelectorAll('.category-section').forEach(section => {
+        const visibleFiles = section.querySelectorAll('.file-item[style="display: flex;"]').length;
+        const allHidden = section.querySelectorAll('.file-item[style="display: none;"]').length === section.querySelectorAll('.file-item').length;
+        section.style.display = allHidden ? 'none' : 'block';
+      });
+    });
+    
+    // Filters
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => {
+          b.classList.remove('bg-primary', 'text-primary-foreground');
+          b.classList.add('bg-secondary', 'text-muted-foreground');
+        });
+        btn.classList.remove('bg-secondary', 'text-muted-foreground');
+        btn.classList.add('bg-primary', 'text-primary-foreground');
+        
+        const filter = btn.dataset.filter;
+        
+        document.querySelectorAll('.category-section').forEach(section => {
+          const cat = section.dataset.category;
+          if (filter === 'all') {
+            section.style.display = 'block';
+          } else if (cat.includes(filter)) {
+            section.style.display = 'block';
+          } else {
+            section.style.display = 'none';
+          }
+        });
+      });
+    });
+    
+    // Stats
+    function updateStats() {
+      let totalFiles = 0;
+      let totalLines = 0;
+      
+      Object.values(codeData).forEach(files => {
+        totalFiles += files.length;
+        files.forEach(f => totalLines += f.content.split('\n').length);
+      });
+      
+      document.getElementById('statFiles').textContent = totalFiles;
+      document.getElementById('statCategories').textContent = Object.keys(codeData).length;
+      document.getElementById('statLines').textContent = totalLines > 999 ? (totalLines / 1000).toFixed(1) + 'k' : totalLines;
+    }
+    
+    // Init
+    buildFileTree();
+    updateStats();
+  </script>
+</body>
+</html>
