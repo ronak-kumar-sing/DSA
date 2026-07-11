@@ -55,9 +55,14 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0076-minimum-window-substring](https://github.com/ronak-kumar-sing/DSA/tree/master/0076-minimum-window-substring) |
+| [0151-reverse-words-in-a-string](https://github.com/ronak-kumar-sing/DSA/tree/master/0151-reverse-words-in-a-string) |
 | [1021-remove-outermost-parentheses](https://github.com/ronak-kumar-sing/DSA/tree/master/1021-remove-outermost-parentheses) |
 ## Sliding Window
 |  |
 | ------- |
 | [0076-minimum-window-substring](https://github.com/ronak-kumar-sing/DSA/tree/master/0076-minimum-window-substring) |
+## Two Pointers
+|  |
+| ------- |
+| [0151-reverse-words-in-a-string](https://github.com/ronak-kumar-sing/DSA/tree/master/0151-reverse-words-in-a-string) |
 <!---LeetCode Topics End-->
