@@ -12,6 +12,7 @@ public:
                 if(strs[i][j] == prev[j]) res+= prev[j];
                 else break;
             }
+            if(res.empty()) return "";
         }
 
         return res;
