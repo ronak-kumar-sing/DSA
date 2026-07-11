@@ -4,6 +4,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0014-longest-common-prefix](https://github.com/ronak-kumar-sing/DSA/tree/master/0014-longest-common-prefix) |
 | [0033-search-in-rotated-sorted-array](https://github.com/ronak-kumar-sing/DSA/tree/master/0033-search-in-rotated-sorted-array) |
 | [0136-single-number](https://github.com/ronak-kumar-sing/DSA/tree/master/0136-single-number) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/ronak-kumar-sing/DSA/tree/master/0150-evaluate-reverse-polish-notation) |
@@ -55,6 +56,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## String
 |  |
 | ------- |
+| [0014-longest-common-prefix](https://github.com/ronak-kumar-sing/DSA/tree/master/0014-longest-common-prefix) |
 | [0076-minimum-window-substring](https://github.com/ronak-kumar-sing/DSA/tree/master/0076-minimum-window-substring) |
 | [0151-reverse-words-in-a-string](https://github.com/ronak-kumar-sing/DSA/tree/master/0151-reverse-words-in-a-string) |
 | [1021-remove-outermost-parentheses](https://github.com/ronak-kumar-sing/DSA/tree/master/1021-remove-outermost-parentheses) |
@@ -71,4 +73,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1903-largest-odd-number-in-string](https://github.com/ronak-kumar-sing/DSA/tree/master/1903-largest-odd-number-in-string) |
+## Trie
+|  |
+| ------- |
+| [0014-longest-common-prefix](https://github.com/ronak-kumar-sing/DSA/tree/master/0014-longest-common-prefix) |
 <!---LeetCode Topics End-->
