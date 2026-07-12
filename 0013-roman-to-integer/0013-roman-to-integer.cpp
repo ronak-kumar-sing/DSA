@@ -11,23 +11,16 @@ public:
         mp['C'] = 100;
         mp['D'] = 500;
         mp['M'] = 1000;
-
+        int prev = mp[s[0]];
         for (int i = 0; i < n; ++i) {
-            if (i != n - 1 &&
-                (s[i] == 'I' && (s[i + 1] == 'V' || s[i + 1] == 'X'))) {
-                res += mp[s[i + 1]] - 1;
-                i++;
-            } else if (i != n - 1 &&
-                       (s[i] == 'X' && (s[i + 1] == 'L' || s[i + 1] == 'C'))) {
-                res += mp[s[i + 1]] - 10;
-                i++;
-            } else if (i != n - 1 &&
-                       (s[i] == 'C' && (s[i + 1] == 'D' || s[i + 1] == 'M'))) {
-                res += mp[s[i + 1]] - 100;
-                i++;
-            } else {
+            if (!i == 0 && prev < mp[s[i]]) {
+                res += mp[s[i]] - 2*prev;
+                // cout << mp[s[i]] << '-' << prev << endl;
+            } else
                 res += mp[s[i]];
-            }
+            // cout << res << endl;
+
+            prev = mp[s[i]];
         }
         return res;
     }
