@@ -17,20 +17,16 @@ public:
                 (s[i] == 'I' && (s[i + 1] == 'V' || s[i + 1] == 'X'))) {
                 res += mp[s[i + 1]] - 1;
                 i++;
-                cout << '1' <<endl;
             } else if (i != n - 1 &&
                        (s[i] == 'X' && (s[i + 1] == 'L' || s[i + 1] == 'C'))) {
                 res += mp[s[i + 1]] - 10;
-                cout << '2' <<endl;
                 i++;
             } else if (i != n - 1 &&
                        (s[i] == 'C' && (s[i + 1] == 'D' || s[i + 1] == 'M'))) {
-                cout << '3' <<endl;
                 res += mp[s[i + 1]] - 100;
                 i++;
             } else {
                 res += mp[s[i]];
-                cout << '4' << endl;
             }
         }
         return res;
