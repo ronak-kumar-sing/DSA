@@ -39,6 +39,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Math
 |  |
 | ------- |
+| [0013-roman-to-integer](https://github.com/ronak-kumar-sing/DSA/tree/master/0013-roman-to-integer) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/ronak-kumar-sing/DSA/tree/master/0150-evaluate-reverse-polish-notation) |
 | [1903-largest-odd-number-in-string](https://github.com/ronak-kumar-sing/DSA/tree/master/1903-largest-odd-number-in-string) |
 ## Stack
@@ -56,6 +57,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 |  |
 | ------- |
+| [0013-roman-to-integer](https://github.com/ronak-kumar-sing/DSA/tree/master/0013-roman-to-integer) |
 | [0076-minimum-window-substring](https://github.com/ronak-kumar-sing/DSA/tree/master/0076-minimum-window-substring) |
 | [0141-linked-list-cycle](https://github.com/ronak-kumar-sing/DSA/tree/master/0141-linked-list-cycle) |
 | [0205-isomorphic-strings](https://github.com/ronak-kumar-sing/DSA/tree/master/0205-isomorphic-strings) |
@@ -64,6 +66,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## String
 |  |
 | ------- |
+| [0013-roman-to-integer](https://github.com/ronak-kumar-sing/DSA/tree/master/0013-roman-to-integer) |
 | [0014-longest-common-prefix](https://github.com/ronak-kumar-sing/DSA/tree/master/0014-longest-common-prefix) |
 | [0076-minimum-window-substring](https://github.com/ronak-kumar-sing/DSA/tree/master/0076-minimum-window-substring) |
 | [0151-reverse-words-in-a-string](https://github.com/ronak-kumar-sing/DSA/tree/master/0151-reverse-words-in-a-string) |
