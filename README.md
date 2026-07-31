@@ -10,6 +10,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0040-combination-sum-ii](https://github.com/ronak-kumar-sing/DSA/tree/master/0040-combination-sum-ii) |
 | [0136-single-number](https://github.com/ronak-kumar-sing/DSA/tree/master/0136-single-number) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/ronak-kumar-sing/DSA/tree/master/0150-evaluate-reverse-polish-notation) |
+| [0216-combination-sum-iii](https://github.com/ronak-kumar-sing/DSA/tree/master/0216-combination-sum-iii) |
 | [0875-koko-eating-bananas](https://github.com/ronak-kumar-sing/DSA/tree/master/0875-koko-eating-bananas) |
 | [1004-max-consecutive-ones-iii](https://github.com/ronak-kumar-sing/DSA/tree/master/1004-max-consecutive-ones-iii) |
 | [1901-find-a-peak-element-ii](https://github.com/ronak-kumar-sing/DSA/tree/master/1901-find-a-peak-element-ii) |
@@ -184,4 +185,5 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0039-combination-sum](https://github.com/ronak-kumar-sing/DSA/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/ronak-kumar-sing/DSA/tree/master/0040-combination-sum-ii) |
+| [0216-combination-sum-iii](https://github.com/ronak-kumar-sing/DSA/tree/master/0216-combination-sum-iii) |
 <!---LeetCode Topics End-->
