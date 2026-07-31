@@ -7,6 +7,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0014-longest-common-prefix](https://github.com/ronak-kumar-sing/DSA/tree/master/0014-longest-common-prefix) |
 | [0033-search-in-rotated-sorted-array](https://github.com/ronak-kumar-sing/DSA/tree/master/0033-search-in-rotated-sorted-array) |
 | [0039-combination-sum](https://github.com/ronak-kumar-sing/DSA/tree/master/0039-combination-sum) |
+| [0040-combination-sum-ii](https://github.com/ronak-kumar-sing/DSA/tree/master/0040-combination-sum-ii) |
 | [0136-single-number](https://github.com/ronak-kumar-sing/DSA/tree/master/0136-single-number) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/ronak-kumar-sing/DSA/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0875-koko-eating-bananas](https://github.com/ronak-kumar-sing/DSA/tree/master/0875-koko-eating-bananas) |
@@ -182,4 +183,5 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0039-combination-sum](https://github.com/ronak-kumar-sing/DSA/tree/master/0039-combination-sum) |
+| [0040-combination-sum-ii](https://github.com/ronak-kumar-sing/DSA/tree/master/0040-combination-sum-ii) |
 <!---LeetCode Topics End-->
