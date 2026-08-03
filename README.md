@@ -8,6 +8,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0033-search-in-rotated-sorted-array](https://github.com/ronak-kumar-sing/DSA/tree/master/0033-search-in-rotated-sorted-array) |
 | [0039-combination-sum](https://github.com/ronak-kumar-sing/DSA/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/ronak-kumar-sing/DSA/tree/master/0040-combination-sum-ii) |
+| [0079-word-search](https://github.com/ronak-kumar-sing/DSA/tree/master/0079-word-search) |
 | [0136-single-number](https://github.com/ronak-kumar-sing/DSA/tree/master/0136-single-number) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/ronak-kumar-sing/DSA/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0216-combination-sum-iii](https://github.com/ronak-kumar-sing/DSA/tree/master/0216-combination-sum-iii) |
@@ -18,6 +19,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Matrix
 |  |
 | ------- |
+| [0079-word-search](https://github.com/ronak-kumar-sing/DSA/tree/master/0079-word-search) |
 | [1901-find-a-peak-element-ii](https://github.com/ronak-kumar-sing/DSA/tree/master/1901-find-a-peak-element-ii) |
 | [2643-row-with-maximum-ones](https://github.com/ronak-kumar-sing/DSA/tree/master/2643-row-with-maximum-ones) |
 ## Divide and Conquer
@@ -98,6 +100,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0014-longest-common-prefix](https://github.com/ronak-kumar-sing/DSA/tree/master/0014-longest-common-prefix) |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/ronak-kumar-sing/DSA/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0076-minimum-window-substring](https://github.com/ronak-kumar-sing/DSA/tree/master/0076-minimum-window-substring) |
+| [0079-word-search](https://github.com/ronak-kumar-sing/DSA/tree/master/0079-word-search) |
 | [0131-palindrome-partitioning](https://github.com/ronak-kumar-sing/DSA/tree/master/0131-palindrome-partitioning) |
 | [0151-reverse-words-in-a-string](https://github.com/ronak-kumar-sing/DSA/tree/master/0151-reverse-words-in-a-string) |
 | [0205-isomorphic-strings](https://github.com/ronak-kumar-sing/DSA/tree/master/0205-isomorphic-strings) |
@@ -177,6 +180,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Depth-First Search
 |  |
 | ------- |
+| [0079-word-search](https://github.com/ronak-kumar-sing/DSA/tree/master/0079-word-search) |
 | [0094-binary-tree-inorder-traversal](https://github.com/ronak-kumar-sing/DSA/tree/master/0094-binary-tree-inorder-traversal) |
 | [0104-maximum-depth-of-binary-tree](https://github.com/ronak-kumar-sing/DSA/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0144-binary-tree-preorder-traversal](https://github.com/ronak-kumar-sing/DSA/tree/master/0144-binary-tree-preorder-traversal) |
@@ -196,6 +200,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0017-letter-combinations-of-a-phone-number](https://github.com/ronak-kumar-sing/DSA/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0039-combination-sum](https://github.com/ronak-kumar-sing/DSA/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/ronak-kumar-sing/DSA/tree/master/0040-combination-sum-ii) |
+| [0079-word-search](https://github.com/ronak-kumar-sing/DSA/tree/master/0079-word-search) |
 | [0131-palindrome-partitioning](https://github.com/ronak-kumar-sing/DSA/tree/master/0131-palindrome-partitioning) |
 | [0216-combination-sum-iii](https://github.com/ronak-kumar-sing/DSA/tree/master/0216-combination-sum-iii) |
 ## Breadth-First Search
