@@ -8,6 +8,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0033-search-in-rotated-sorted-array](https://github.com/ronak-kumar-sing/DSA/tree/master/0033-search-in-rotated-sorted-array) |
 | [0039-combination-sum](https://github.com/ronak-kumar-sing/DSA/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/ronak-kumar-sing/DSA/tree/master/0040-combination-sum-ii) |
+| [0051-n-queens](https://github.com/ronak-kumar-sing/DSA/tree/master/0051-n-queens) |
 | [0079-word-search](https://github.com/ronak-kumar-sing/DSA/tree/master/0079-word-search) |
 | [0136-single-number](https://github.com/ronak-kumar-sing/DSA/tree/master/0136-single-number) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/ronak-kumar-sing/DSA/tree/master/0150-evaluate-reverse-polish-notation) |
@@ -200,6 +201,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0017-letter-combinations-of-a-phone-number](https://github.com/ronak-kumar-sing/DSA/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0039-combination-sum](https://github.com/ronak-kumar-sing/DSA/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/ronak-kumar-sing/DSA/tree/master/0040-combination-sum-ii) |
+| [0051-n-queens](https://github.com/ronak-kumar-sing/DSA/tree/master/0051-n-queens) |
 | [0079-word-search](https://github.com/ronak-kumar-sing/DSA/tree/master/0079-word-search) |
 | [0131-palindrome-partitioning](https://github.com/ronak-kumar-sing/DSA/tree/master/0131-palindrome-partitioning) |
 | [0216-combination-sum-iii](https://github.com/ronak-kumar-sing/DSA/tree/master/0216-combination-sum-iii) |
@@ -216,4 +218,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0131-palindrome-partitioning](https://github.com/ronak-kumar-sing/DSA/tree/master/0131-palindrome-partitioning) |
+## Algorithm X
+|  |
+| ------- |
+| [0051-n-queens](https://github.com/ronak-kumar-sing/DSA/tree/master/0051-n-queens) |
 <!---LeetCode Topics End-->
